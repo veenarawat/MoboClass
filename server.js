@@ -3,6 +3,7 @@ let bodyParser=require('body-parser');
 
 const app=express();
 const http = require('http').Server(app);
+let port=5000||process.env.PORT;
 const io = require('socket.io')(http);
 //let db = require('./db/db');
 const passport=require('passport');
@@ -141,8 +142,8 @@ app.get('/success',function (req,res) {
     res.sendFile('sd.html', {root : __dirname + '/public'});
 });
 
-http.listen(5000,function () {
-    console.log("Server is running on port 5000.");
+http.listen(port,function () {
+    console.log("Server is running on port "+port);
     //db.connect();
 });
 
