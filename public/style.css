@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Canvas
+
+
+#conatiner{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}*/
+
+.row .form-group .btn-primary{
+    background-color: black;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+/*.row .form-group label{
+    font-size: 2em;
+    font-family: monospace;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    color: black;
+}*/
+
+#container
+{
+    display:flex;
+    flex-wrap:wrap;
+    margin: 0;
+    padding: 0;
+}
+.welcome{
+    display: inline-block;
+    width:80%;
+    height:58px;
+    text-align: center;
+    font-family: serif
+}
+header
+{
+    height: 60px;
+    width: 100%;
+    position:fixed;
+    background-color: #e60073;
+}
+.board{
+    height: 92%;
+    width: 100%;
+    display: block;
+}
+.whiteboard {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.buttons{
+    float:right;
+    display: inline-block;
+    margin-top: 0.5%;
+}
+#topic,#entertopic,#back
+{
+    float:left;
+    display: inline-block;
+    margin-top: 0.5%;
+}
+/*.fas fa-microphone,.fas fa-assistive-listening-systems,.fas fa-address-card,.far fa-hand-paper,.fas fa-pause-circle
+{
+
+}*/
+footer
+{
+    margin-top: -4.5%;
+    position: fixed;
+    height:8%;
+    width:100%;
+    background-color:#701821;
+}
+.colors {
+    position: fixed;
+    display: inline-block;
+    margin-top: 1%;
+}
+
+.color {
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    border: 5px solid white;
+}
+
+.color.black { background-color: black; }
+.color.red { background-color: red; }
+.color.green { background-color: green; }
+.color.blue { background-color: blue; }
+.color.yellow { background-color: yellow; }

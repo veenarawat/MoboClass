@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ClassRoom</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #container{
+            display:none;
+        }
+        #start,#pause,#control,#doubt,#clear,#topic,#entertopic,#back{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="row" id="userFormArea">
+    <div class="col-sm-12">
+        <form id="userForm" onsubmit="myfun()">
+            <div class="form-group">
+                <label>Enter UserName</label>
+                <input class="form-control" id="username">
+                <br>
+                <input type="submit" class="btn btn-primary" value="Login">
+
+            </div>
+        </form>
+    </div>
+</div>
+<div id="container">
+<header>
+    <div class="welcome" id="topicop"><h1  style="color:#cec0c0;">Welcome</h1></div>
+    <div class="colors">
+        <div class="color black"></div>
+        <div class="color red"></div>
+        <div class="color green"></div>
+        <div class="color blue"></div>
+        <div class="color yellow"></div>
+    </div>
+</header>
+
+<div class="board">
+    <canvas class="whiteboard" ></canvas>
+</div>
+<footer >
+    <button type="button" id="topic"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button>
+    <input id="entertopic">
+    <button type="button" id="back"><i class="fas fa-arrow-circle-left" aria-hidden="true"></i></button>
+    <div class="buttons">
+             <button type="button" id="start"><i class="fas fa-microphone fa-lg" aria-hidden="true"></i></button>
+             <button type="button" id="pause"><i class="fas fa-pause-circle fa-lg" aria-hidden="true"></i></button>
+             <button type="button" id="control"><i class="fas fa-address-card fa-lg" aria-hidden="true"></i></button>
+             <button type="button" id="doubt"><i class="far fa-hand-paper fa-lg" aria-hidden="true"></i></i></button>
+             <button type="button" id="clear"><i class="far fa-thumbs-up fa-lg" aria-hidden="true"></i></button>
+    </div>
+</footer>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>
